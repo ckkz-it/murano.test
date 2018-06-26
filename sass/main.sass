@@ -1,0 +1,126 @@
+*:focus
+    outline: none
+
+body
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif
+    margin: 0
+    padding: 0
+    background-color: #88C8CE
+
+
+.container
+    position: relative
+    max-width: 1000px
+    margin: 0 auto
+    margin-top: 100px
+    padding: 10px
+    opacity: 0
+    background-color: #3C7B81
+    border-radius: 10px
+    &.active
+        opacity: 1
+        padding-top: 150px
+        padding-bottom: 300px
+        transition: padding 1s ease, opacity .5s
+    form
+        display: inline-block
+        width: 100%
+        text-align: center
+        #city
+            font-size: 18px
+            color: rgba(#325557, .8)
+            width: 250px
+            padding: 8px
+            border: 1px solid #5A9FA4
+            background-color: #fffeee
+            border-radius: 5px
+            transition: border .25s, color .25s
+            &:focus
+                border: 1px solid #3C7B81
+                color: #325557
+            option
+                color: #325557
+        #get-weather
+            font-size: 14px
+            font-weight: bold
+            color: #3B7A80
+            padding: 8px
+            padding-left: 10px
+            margin-left: 20px
+            margin-top: 5px
+            cursor: pointer
+            border: 1px solid #5A9FA4
+            background-color: #88C8CE
+            border-radius: 3px
+            transition: background-color .25s, color .25s, border .25s
+            &:hover
+                color: #fff
+                background-color: #5A9FA4
+                border: 1px solid #5A9FA4
+
+h1
+    font-size: 40px
+    color: #303030
+    margin-top: 50px
+    text-align: center
+
+.required
+    position: absolute
+    font-size: 18px
+    font-weight: bold
+    color: #87C7CD
+    top: 120px
+    left: 360px
+
+
+#weather-wrapper
+    display: flex
+    flex-direction: column
+    font-size: 20px
+    margin-top: 50px
+    margin-left: 100px
+    color: #232323
+    div
+        margin-bottom: 10px
+        span:not(#cloudness)
+            color: #fff
+            font-weight: bold
+    #cloud
+        position: relative
+        img
+            position: absolute
+            top: -15px
+
+#full-forecast
+    display: block
+    width: 80%
+    font-size: 18px
+    text-align: center
+    margin: 0 auto
+    color: #3B7A80
+    margin-top: 30px
+    padding: 8px
+    background-color: #88C8CE
+    border-radius: 3px
+    text-decoration: none
+    transition: color .25s, background-color .25s
+    &:hover
+        color: #fff
+        background-color: #5A9FA4
+    &:active
+        background-color: darken(#5A9FA4, 5%)
+
+
+@media screen and (max-width: 480px)
+    .container
+        &.active
+            padding-top: 50px
+            padding-bottom: 50px
+            margin: 0
+            margin-top: 50px
+        form
+            #get-weather
+                margin-left: 0px
+    #weather-wrapper
+        font-size: 18px
+        margin-left: 30px
